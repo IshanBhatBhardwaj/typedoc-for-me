@@ -1,17 +1,38 @@
+/**
+ * Represents a generalized heap. The exact implementations of its `heapifyUp`
+ * and `heapifyDown` methods are left to the subclass to define.
+ */
 export abstract class AbstractHeap<T> {
   protected heap: T[] = [];
   /**
-   * A method that should return a negative number if item a has higher priority
-   * than b, a positive number if b has higher priority than a, and 0 if the
-   * same.
+   * Determines whether the the item at index i should move to the top of the
+   * heap, and if so, swaps it with its parent until it should no longer
+   * be moved up.
    */
-  protected abstract compare(a: T, b: T): number;
+  protected abstract heapifyUp(i: number): void;
+  /**
+   * Determines whether the the item at index i should move to the bottom of the
+   * heap, and if so, swaps it with one of its children until it should no
+   * longer be moved down.
+   */
+  protected abstract heapifyDown(i: number): void;
 
+  /**
+   * Inserts data into the heap and bubbles it up to its proper location within
+   * the heap.
+   *
+   * @param data - The data to insert.
+   */
   public insert(data: T) {
     this.heap.push(data);
     this.heapifyUp(this.heap.length);
   }
 
+  /**
+   * Removes the extremum of the heap and returns it.
+   *
+   * @returns data of type `T`
+   */
   public pop(): T {
     if (this.isEmpty()) {
       throw new HeapEmptyError("Could not pop item from empty heap.");
@@ -27,70 +48,79 @@ export abstract class AbstractHeap<T> {
     return extremum;
   }
 
+  /**
+   * Returns the extremum of the heap without removing it.
+   *
+   * @returns data of type `T`
+   */
   public peek(): T {
     if (this.isEmpty()) {
-      throw new HeapEmptyError("Could not access item from empty heap.");
+      throw new HeapEmptyError("Could not access item of empty heap.");
     }
 
     return this.heap[0];
   }
 
+  /**
+   * Returns the number of items in the heap.
+   *
+   * @returns The number of items in the heap.
+   */
+  public size(): number {
+    return this.heap.length;
+  }
+
+  /**
+   * Returns true if the heap contains no items.
+   *
+   * @returns A boolean value indicating whether or not the heap is empty.
+   */
   public isEmpty(): boolean {
-    return this.heap.length === 0;
+    return this.size() === 0;
   }
 
-  protected heapifyDown(i: number): void {
-    let extremum = i;
-    const leftChild = this.leftChild(i);
-    const rightChild = this.rightChild(i);
-
-    if (
-      leftChild < this.heap.length &&
-      this.compare(this.heap[leftChild], this.heap[extremum]) < 0
-    ) {
-      extremum = leftChild;
-    }
-
-    if (
-      rightChild < this.heap.length &&
-      this.compare(this.heap[rightChild], this.heap[extremum]) < 0
-    ) {
-      extremum = rightChild;
-    }
-
-    if (extremum !== i) {
-      this.swap(i, extremum);
-      this.heapifyDown(extremum);
-    }
-  }
-
-  protected heapifyUp(i: number): void {
-    let parent = this.parent(i);
-
-    while (parent >= 0 && this.compare(this.heap[i], this.heap[parent]) < 0) {
-      this.swap(i, parent);
-      i = parent;
-      parent = this.parent(i);
-    }
-  }
-
+  /**
+   * Returns the index of the parent of the element at i.
+   *
+   * @returns The index of the parent of the element at i.
+   */
   protected parent(i: number): number {
     return Math.floor((i - 1) / 2);
   }
 
+  /**
+   * Returns the index of the left child of the element at i.
+   *
+   * @returns The index of the left child of the element at i.
+   */
   protected leftChild(i: number): number {
     return i * 2 + 1;
   }
 
+  /**
+   * Returns the index of the right child of the element at i.
+   *
+   * @returns The index of the right child of the element at i.
+   */
   protected rightChild(i: number): number {
     return i * 2 + 2;
   }
 
+  /**
+   * Swaps the values of the elements at indices i and j.
+   *
+   * @param i - The index of the first element to swap.
+   * @param j - The index of the second element to swap.
+   */
   protected swap(i: number, j: number) {
     [this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]];
   }
 }
 
+/**
+ * An error to be thrown when an attempt is made to retrieve or remove items
+ * from an empty heap.
+ */
 export class HeapEmptyError extends Error {
   constructor(message: string) {
     super(message);

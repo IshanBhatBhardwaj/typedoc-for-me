@@ -23,7 +23,7 @@ export class Queue<T> {
       return data;
     } catch (e) {
       if (e instanceof ListEmptyError) {
-        throw new QueueEmptyError(QueueEmptyError.Operations.Dequeue);
+        throw new QueueEmptyError("Could not dequeue item from empty queue.");
       }
 
       throw e;
@@ -41,11 +41,20 @@ export class Queue<T> {
       return data;
     } catch (e) {
       if (e instanceof ListEmptyError) {
-        throw new QueueEmptyError(QueueEmptyError.Operations.Front);
+        throw new QueueEmptyError("Could not call front() on empty queue.");
       }
 
       throw e;
     }
+  }
+
+  /**
+   * Returns the number of items in the queue.
+   *
+   * @returns The length of the queue.
+   */
+  public size(): number {
+    return this.queue.size();
   }
 
   /**
@@ -59,29 +68,11 @@ export class Queue<T> {
 }
 
 /**
- * An error to be throw when an attempt is made to retrieve or remove items from
- * an empty queue.
+ * An error to be thrown when an attempt is made to retrieve or remove items
+ * from an empty queue.
  */
 export class QueueEmptyError extends Error {
-  public static readonly Operations = {
-    Dequeue: "Dequeue",
-    Front: "Front",
-  } as const;
-
-  constructor(
-    attemptedOperation: (typeof QueueEmptyError)["Operations"][keyof typeof QueueEmptyError.Operations]
-  ) {
-    let message: string;
-
-    switch (attemptedOperation) {
-      case QueueEmptyError.Operations.Dequeue:
-        message = "Could not dequeue item from empty queue.";
-        break;
-      case QueueEmptyError.Operations.Front:
-        message = "Could not call front() on empty queue.";
-        break;
-    }
-
+  constructor(message: string) {
     super(message);
   }
 }

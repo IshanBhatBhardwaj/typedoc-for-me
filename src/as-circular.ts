@@ -16,6 +16,9 @@
  * ```
  */
 export function asCircular<T>(array: T[]): T[] {
+  /**
+   * Returns true if the provided key is a number or a number-like string.
+   */
   const isNumericKey = (
     key: string | number | symbol
   ): key is number | `${number}` => {
@@ -25,6 +28,19 @@ export function asCircular<T>(array: T[]): T[] {
     );
   };
 
+  /**
+   * Accepts an index that may be outside the bounds of the array and
+   * applies a modulus operation such that the resulting index lies within the
+   * bounds of the array.
+   *
+   * @param i - The index to adjust.
+   * @returns - An index within the bounds of the array.
+   *
+   * @remarks
+   * Negative indices will count backwards from the end of the array (-1 will
+   * represent the last element of the array, -2 refers to the penultimate
+   * element, etc.).
+   */
   const toArrayIndex = (i: string | number) => {
     let index = Number(i) % array.length;
     if (index < 0) index += array.length;

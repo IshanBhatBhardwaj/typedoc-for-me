@@ -6,6 +6,7 @@
 export class LinkedList<T> {
   private head: LinkedListNode<T> | null = null;
   private tail: LinkedListNode<T> | null = null;
+  private nodeCount: number = 0;
 
   /**
    * Appends data to the end of the list.
@@ -22,6 +23,8 @@ export class LinkedList<T> {
       LinkedListNode.linkNodes(this.tail!, node);
       this.tail = node;
     }
+
+    this.nodeCount++;
   }
 
   /**
@@ -33,11 +36,14 @@ export class LinkedList<T> {
     const node = new LinkedListNode(data);
 
     if (this.isEmpty()) {
-      this.append(data);
+      this.head = node;
+      this.tail = this.head;
     } else {
       LinkedListNode.linkNodes(node, this.head!);
       this.head = node;
     }
+
+    this.nodeCount++;
   }
 
   /**
@@ -79,6 +85,7 @@ export class LinkedList<T> {
     const first = this.head!;
     this.head = first.next;
     if (!this.head) this.tail = null;
+    this.nodeCount--;
     return first.data;
   }
 
@@ -95,7 +102,17 @@ export class LinkedList<T> {
     const last = this.tail!;
     this.tail = last.prev;
     if (!this.tail) this.head = null;
+    this.nodeCount--;
     return last.data;
+  }
+
+  /**
+   * Returns the number of items in the list.
+   *
+   * @returns The length of the list.
+   */
+  size(): number {
+    return this.nodeCount;
   }
 
   /**
@@ -104,7 +121,7 @@ export class LinkedList<T> {
    * @returns A boolean value indicating whether or not the list is empty.
    */
   isEmpty(): boolean {
-    return this.head === null;
+    return this.size() === 0;
   }
 }
 
@@ -130,8 +147,8 @@ export class LinkedListNode<T> {
 }
 
 /**
- * An error to be throw when an attempt is made to retrieve or remove items from
- * an empty list.
+ * An error to be thrown when an attempt is made to retrieve or remove items
+ * from an empty list.
  */
 export class ListEmptyError extends Error {
   public static readonly Operations = {

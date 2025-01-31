@@ -84,7 +84,13 @@ export class LinkedList<T> {
 
     const first = this.head!;
     this.head = first.next;
-    if (!this.head) this.tail = null;
+
+    if (this.head) {
+      this.head.prev = null;
+    } else {
+      this.tail = null;
+    }
+
     this.nodeCount--;
     return first.data;
   }
@@ -101,7 +107,13 @@ export class LinkedList<T> {
 
     const last = this.tail!;
     this.tail = last.prev;
-    if (!this.tail) this.head = null;
+
+    if (this.tail) {
+      this.tail.next = null;
+    } else {
+      this.head = null;
+    }
+
     this.nodeCount--;
     return last.data;
   }

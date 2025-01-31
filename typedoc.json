@@ -1,0 +1,12 @@
+{
+  "plugin": ["typedoc-plugin-markdown"],
+  "readme": "none",
+  "outputs": [
+    {
+      "name": "markdown",
+      "path": "./docs"
+    }
+  ],
+  "hidePageHeader": true,
+  "flattenOutputFiles": true
+}

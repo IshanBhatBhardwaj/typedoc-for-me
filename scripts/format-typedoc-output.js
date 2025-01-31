@@ -18,7 +18,7 @@ class TypeDocFormatter {
    */
   renameREADME() {
     const oldPath = path.join(__dirname, "../docs/README.md");
-    const newPath = path.join(__dirname, "../docs/APIReference.md");
+    const newPath = path.join(__dirname, "../docs/API Reference.md");
     fsSync.renameSync(oldPath, newPath);
   }
 
@@ -106,7 +106,7 @@ class TypeDocFormatter {
   replaceLinksToReadMe(fileContents) {
     return fileContents.replaceAll(
       /(?<=\[[^\]]*\]\([^\)]*)README(?=(?:\.md)?\))/g,
-      "APIReference"
+      "API Reference"
     );
   }
 

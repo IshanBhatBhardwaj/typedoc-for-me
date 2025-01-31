@@ -29,8 +29,10 @@ jobs:
           repository: ${{github.repository}}.wiki
           path: ${{github.repository}}.wiki
 
-      - name: Build Docs
+      - name: Setup Node
         uses: actions/setup-node@v4
+
+      - name: Build Docs
         run: |
           cd $GITHUB_WORKSPACE/${{github.repository}}
           npm ci

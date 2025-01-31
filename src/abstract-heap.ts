@@ -25,7 +25,7 @@ export abstract class AbstractHeap<T> {
    */
   public insert(data: T) {
     this.heap.push(data);
-    this.heapifyUp(this.heap.length);
+    this.heapifyUp(this.heap.length - 1);
   }
 
   /**

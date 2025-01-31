@@ -123,6 +123,15 @@ export class LinkedList<T> {
   isEmpty(): boolean {
     return this.size() === 0;
   }
+
+  *[Symbol.iterator]() {
+    let current = this.head;
+
+    while (current) {
+      yield current.data;
+      current = current.next;
+    }
+  }
 }
 
 /**

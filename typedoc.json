@@ -7,6 +7,6 @@
       "path": "./docs"
     }
   ],
-  "hidePageHeader": true,
-  "flattenOutputFiles": true
+  "flattenOutputFiles": true,
+  "sort": ["source-order"]
 }

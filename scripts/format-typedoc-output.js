@@ -94,9 +94,13 @@ class TypeDocFormatter {
    * (like `[wiki-typedoc-example]`).
    */
   replaceReferencesToRepoName(fileContents) {
-    return fileContents.replaceAll(
-      /(# wiki-typedoc-example|(?<=\[)wiki-typedoc-example(?=\]))/g,
+    fileContents = fileContents.replaceAll(
+      /# wiki-typedoc-example/g,
       "API Reference"
+    );
+    return fileContents.replaceAll(
+      /(?<=\[)wiki-typedoc-example(?=\]))/g,
+      "API%20Reference"
     );
   }
 

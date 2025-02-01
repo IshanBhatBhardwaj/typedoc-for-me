@@ -99,7 +99,7 @@ class TypeDocFormatter {
       "API Reference"
     );
     return fileContents.replaceAll(
-      /(?<=\[)wiki-typedoc-example(?=\]))/g,
+      /(?<=\[)wiki-typedoc-example(?=\])/g,
       "API%20Reference"
     );
   }

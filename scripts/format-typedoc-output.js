@@ -94,13 +94,9 @@ class TypeDocFormatter {
    * (like `[wiki-typedoc-example]`).
    */
   replaceReferencesToRepoName(fileContents) {
-    fileContents = fileContents.replaceAll(
-      /# wiki-typedoc-example/g,
-      "API Reference"
-    );
     return fileContents.replaceAll(
-      /(?<=\[)wiki-typedoc-example(?=\])/g,
-      "API%20Reference"
+      /(# wiki-typedoc-example|(?<=\[)wiki-typedoc-example(?=\]))/g,
+      "API Reference"
     );
   }
 
@@ -110,7 +106,7 @@ class TypeDocFormatter {
   replaceLinksToReadMe(fileContents) {
     return fileContents.replaceAll(
       /(?<=\[[^\]]*\]\([^\)]*)README(?=(?:\.md)?\))/g,
-      "API Reference"
+      "API%20Reference"
     );
   }
 

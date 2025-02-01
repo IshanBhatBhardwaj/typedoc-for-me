@@ -42,7 +42,7 @@ jobs:
       - name: Push to Wiki
         run: |
           set -e
-          find "$GITHUB_WORKSPACE/${{github.repository}}.wiki" -mindepth 1 -delete
+          find "$GITHUB_WORKSPACE/${{github.repository}}.wiki" -name "*.md" -delete
           cd $GITHUB_WORKSPACE/${{github.repository}}.wiki
           cp -r $GITHUB_WORKSPACE/${{github.repository}}/docs/* .
           cp -r $GITHUB_WORKSPACE/${{github.repository}}/wiki/* .

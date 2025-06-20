@@ -96,7 +96,7 @@ class TypeDocFormatter {
   replaceReferencesToRepoName(fileContents) {
     return fileContents.replaceAll(
       /(# wiki-typedoc-example|(?<=\[)wiki-typedoc-example(?=\]))/g,
-      "API Reference"
+      "😈API Reference"
     );
   }
 

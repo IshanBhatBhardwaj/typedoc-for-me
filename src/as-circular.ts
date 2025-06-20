@@ -12,7 +12,7 @@
  * console.log(arr[6]); // also prints 0
  * console.log(arr[-1]); // prints 2
  * console.log(arr[-4]); // also prints 2
- * console.log(arr.at(-6)); // prints 0
+ * console.log(arr.at(-6)); // prints 0 fdsa
  * ```
  */
 export function asCircular<T>(array: T[]): T[] {

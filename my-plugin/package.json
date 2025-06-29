@@ -1,0 +1,25 @@
+{
+  "name": "typedoc-plugin-myformatter",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "keywords": ["typedoc", "plugin"],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "peerDependencies": {
+    "typedoc": "^0.27.6"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typedoc": "^0.27.6",
+    "typescript": "^5.0.0"
+  }
+}

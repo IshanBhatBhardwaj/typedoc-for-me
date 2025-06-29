@@ -1,12 +1,7 @@
 {
-  "plugin": ["typedoc-plugin-markdown"],
+  "plugin": ["typedoc-plugin-markdown", "typedoc-plugin-myformatter"],
   "readme": "none",
-  "outputs": [
-    {
-      "name": "markdown",
-      "path": "./docs"
-    }
-  ],
+  "out": "./docs",
   "hidePageHeader": true,
   "flattenOutputFiles": true,
   "sort": ["source-order"]

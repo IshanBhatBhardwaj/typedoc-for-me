@@ -31,6 +31,7 @@ class TypeDocFormatter {
     const awaitedOperations = [];
     const root = path.join(__dirname, "../docs");
     this.formatFilesRecursive(root, awaitedOperations);
+    console.log("PROM ", awaitedOperations)
     return Promise.all(awaitedOperations);
   }
 

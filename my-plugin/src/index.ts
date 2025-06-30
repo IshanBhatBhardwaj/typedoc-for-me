@@ -101,8 +101,6 @@ app.renderer.on(RendererEvent.END, async (event) => {
 
   const formatter = new TypeDocFormatter()
   formatter.format(event.outputDirectory);
-
-
 });
 
 }

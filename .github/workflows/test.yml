@@ -21,7 +21,6 @@ jobs:
 
       - name: Create Docs
         run: |
-          cd $GITHUB_WORKSPACE/${{github.repository}}
           npm run docs
 
       - name: Run Tests

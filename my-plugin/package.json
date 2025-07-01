@@ -4,7 +4,10 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
-  "keywords": ["typedoc", "plugin"],
+  "keywords": [
+    "typedoc",
+    "plugin"
+  ],
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -14,10 +17,13 @@
   },
   "peerDependencies": {
     "typedoc": ">=0.28.0 <1.0.0",
-    "typescript": "^5.2.2",
-    "typedoc-plugin-markdown": "^4.4.1"
+    "typedoc-plugin-markdown": "^4.4.1",
+    "typescript": "^5.2.2"
   },
   "scripts": {
     "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.8"
   }
 }

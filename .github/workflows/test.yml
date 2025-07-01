@@ -21,9 +21,7 @@ jobs:
       - name: CI
         run: |
           cd my-plugin
-          ls
           npm ci
-          cat package-lock.json
           npm run build
           cd ..
           npm ci
@@ -33,7 +31,15 @@ jobs:
           npm run docs
 
       - name: Run Tests
+        run: |
+          export FORBIDDEN_PHRASE=${{ github.repository }}
+          echo The secret is:$FORBIDDEN_PHRASE
+
+          export REQUIRED_PHRASE=API Reference
+          echo The secret is:$REQUIRED_PHRASE
+
+          npm run test
         env:
           REQUIRED_PHRASE: "API Reference,API%20Reference"
           FORBIDDEN_PHRASE: "# ${{ github.repository }},[${{ github.repository }}]"
-        run: npm run test
+

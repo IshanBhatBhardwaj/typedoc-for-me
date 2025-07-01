@@ -35,7 +35,12 @@ jobs:
       - name: Build Docs
         run: |
           cd $GITHUB_WORKSPACE/${{github.repository}}
-          
+
+          cd my-plugin
+          npm ci
+          npm run build
+          cd ..
+
           npm ci
           npm run docs
 

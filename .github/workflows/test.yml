@@ -18,10 +18,9 @@ jobs:
 
       - name: CI
         run: |
+          ls
           cd my-plugin
           npm run build
-          cd..
-          npm ci
 
       - name: Create Docs
         run: |

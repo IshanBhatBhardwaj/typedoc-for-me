@@ -6,11 +6,13 @@ const DOCS_DIR = path.join(__dirname, '/docs');
 const FORBIDDEN_PHRASES = process.env.FORBIDDEN_PHRASES
 const REQUIRED_PHRASES = process.env.REQUIRED_PHRASES
 
-console.log("look here: ", FORBIDDEN_PHRASES)
-console.log("look here: ", REQUIRED_PHRASES)
+
 
 
 describe('Generated docs content validation', () => {
+
+    console.log("look here: ", FORBIDDEN_PHRASES)
+    console.log("look here: ", REQUIRED_PHRASES)
 
   if (FORBIDDEN_PHRASES === undefined) {
     throw new Error("Must define FORBIDDEN_PHRASES as a string seperated with a , : PHRASE1,PHRASE2,PHRASE3")

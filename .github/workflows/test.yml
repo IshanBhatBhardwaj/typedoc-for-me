@@ -17,7 +17,11 @@ jobs:
         uses: actions/setup-node@v4
 
       - name: CI
-        run: npm ci
+        run: |
+          cd my-plugin
+          npm run build
+          cd..
+          npm ci
 
       - name: Create Docs
         run: |

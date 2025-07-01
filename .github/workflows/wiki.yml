@@ -35,9 +35,9 @@ jobs:
       - name: Build Docs
         run: |
           cd $GITHUB_WORKSPACE/${{github.repository}}
+          
           npm ci
           npm run docs
-          npm run format-docs
 
       - name: Push to Wiki
         run: |

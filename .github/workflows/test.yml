@@ -19,6 +19,7 @@ jobs:
       - name: CI
         run: |
           cd my-plugin
+          npm install
           npm ci
           npm run build
           cd ..

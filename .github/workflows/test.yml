@@ -20,6 +20,7 @@ jobs:
         run: |
           ls
           cd my-plugin
+          npm ci
           npm run build
 
       - name: Create Docs

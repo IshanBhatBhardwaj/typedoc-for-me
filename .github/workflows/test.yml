@@ -22,6 +22,7 @@ jobs:
         run: |
           cd my-plugin
           npm ci
+          cat package-lock.json
           npm run build
           cd ..
           npm ci

@@ -31,10 +31,8 @@ jobs:
           npm run docs
 
       - name: Run Tests
-        run: |
-            echo "FORBIDDEN_PHRASE is: $FORBIDDEN_PHRASE"
-            npm run test
+        run: npm run test
         env:
-          REQUIRED_PHRASE: "API Reference"
-          FORBIDDEN_PHRASE: "urMom"
+          REQUIRED_PHRASE: "API Reference,API%20Reference"
+          FORBIDDEN_PHRASE: "# ${{ github.repository }},[${{ github.repository }}]"
 

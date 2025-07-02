@@ -1,24 +1,28 @@
-
 import fs from 'fs';
 import path from 'path';
 
 const DOCS_DIR = path.join(__dirname, '/docs');
 
-
-
-
 describe('Generated docs content validation', () => {
+  let forbiddenPhrases: string[];
+  let requiredPhrases: string[];
 
+  beforeAll(() => {
+    if (process.env.FORBIDDEN_PHRASE === undefined) {
+      throw new Error(
+        'Must define FORBIDDEN_PHRASE as a comma-separated string: PHRASE1,PHRASE2'
+      );
+    }
 
+    if (process.env.REQUIRED_PHRASE === undefined) {
+      throw new Error(
+        'Must define REQUIRED_PHRASE as a comma-separated string: PHRASE1,PHRASE2'
+      );
+    }
 
-
-  if (process.env.FORBIDDEN_PHRASE === undefined) {
-    throw new Error("Must define FORBIDDEN_PHRASES as a string seperated with a , : PHRASE1,PHRASE2,PHRASE3")
-  }
-
-  if (process.env.REQUIRED_PHRASES === undefined) {
-    throw new Error("Must define REQUIRED_PHRASES as a string seperated with a , : PHRASE1,PHRASE2,PHRASE3")
-  }
+    forbiddenPhrases = process.env.FORBIDDEN_PHRASE.split(',');
+    requiredPhrases = process.env.REQUIRED_PHRASE.split(',');
+  });
 
   const files = fs.readdirSync(DOCS_DIR);
 
@@ -28,9 +32,13 @@ describe('Generated docs content validation', () => {
     test(`"${file}" should contain required and not contain forbidden phrases`, () => {
       const content = fs.readFileSync(filePath, 'utf8');
 
-      const FORBIDDEN_PHRASE = process.env.FORBIDDEN_PHRASE;
-      console.log("Hmmm " , FORBIDDEN_PHRASE)
+      for (const required of requiredPhrases) {
+        expect(content).toContain(required);
+      }
 
+      for (const forbidden of forbiddenPhrases) {
+        expect(content).not.toContain(forbidden);
+      }
     });
   });
 });

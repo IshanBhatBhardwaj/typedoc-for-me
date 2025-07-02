@@ -1,3 +1,4 @@
 node_modules/
 dist/
 my-plugin/node_modules
+src/__tests__

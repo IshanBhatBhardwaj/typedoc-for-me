@@ -33,11 +33,13 @@ describe('Generated docs content validation', () => {
       const content = fs.readFileSync(filePath, 'utf8');
 
       for (const required of requiredPhrases) {
-        expect(content).toContain(required);
+        const regex = RegExp(required)
+        expect(content).toContain(regex);
       }
 
       for (const forbidden of forbiddenPhrases) {
-        expect(content).not.toContain(forbidden);
+        const regex = RegExp(forbidden)
+        expect(content).not.toContain(regex);
       }
     });
   });

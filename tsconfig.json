@@ -5,7 +5,7 @@
     "module": "NodeNext",
     "moduleResolution": "nodenext",
     "outDir": "./dist",
-    "lib": ["es2023"],
+    "lib": ["es2023"]
   },
   "files": ["./src/index.ts"]
 }

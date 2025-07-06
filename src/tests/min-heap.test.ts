@@ -24,7 +24,7 @@ describe("MinHeap", () => {
     }
 
     // sort items in descending order
-    const sorted = items.toSorted((a, b) => b - a);
+    const sorted = [...items].sort((a,b) => b-a);
 
     while (!heap.isEmpty()) {
       expect(heap.pop()).toBe(sorted.pop());

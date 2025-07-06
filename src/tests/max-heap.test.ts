@@ -23,7 +23,7 @@ describe("MaxHeap", () => {
       items.push(n);
     }
 
-    const sorted = items.toSorted((a, b) => a - b);
+    const sorted = [...items].sort((a,b) => b-a);
 
     while (!heap.isEmpty()) {
       expect(heap.pop()).toBe(sorted.pop());

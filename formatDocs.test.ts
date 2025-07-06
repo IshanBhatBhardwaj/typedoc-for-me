@@ -20,7 +20,7 @@ describe('Generated docs content validation', () => {
       );
     }
 
-    forbiddenPhrases = process.env.REQUIRED_PHRASE.split(",");
+    forbiddenPhrases = process.env.FORBIDDEN_PHRASE.split(",");
     requiredPhrases = process.env.REQUIRED_PHRASE.split(',');
   });
 

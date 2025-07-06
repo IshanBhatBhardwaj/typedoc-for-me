@@ -15,7 +15,7 @@ describe("MaxHeap", () => {
 
   it("removes and returns the largest element when pop() is called.", () => {
     const heap = new MaxHeap();
-    const items = [];
+    const items: number[] = [];
 
     for (let i = 0; i < 20; i++) {
       const n = Math.random() * 2000 - 1000;

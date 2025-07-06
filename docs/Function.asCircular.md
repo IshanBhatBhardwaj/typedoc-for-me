@@ -1,10 +1,10 @@
-[😈API Reference](API%20Reference) / asCircular
+[API Reference](API%20Reference) / asCircular
 
 # Function: asCircular()
 
 > **asCircular**\<`T`\>(`array`): `T`[]
 
-Defined in: [as-circular.ts:18](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/299315c7fb1cdaafa8704c567d9bf9f6bcd67756/src/as-circular.ts#L18)
+Defined in: [as-circular.ts:18](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/faea5610959081dfc4a6cc5e156cd390d5019540/src/as-circular.ts#L18)
 
 Accepts an array and converts it into a circular array.
 

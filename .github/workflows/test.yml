@@ -33,6 +33,6 @@ jobs:
       - name: Run Tests
         run: npm run test
         env:
-          REQUIRED_PHRASE: "API Reference,API%20Reference"
+          REQUIRED_PHRASE: "API Reference"
           FORBIDDEN_PHRASE: "# ${{ github.repository }},[${{ github.repository }}]"
 

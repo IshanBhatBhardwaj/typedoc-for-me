@@ -3,7 +3,7 @@
   "readme": "none",
   "entryPoints": ["src/index.ts"],
   "out": "./docs",
-  "hidePageHeader": true,
+  "hidePageHeader": false,
   "flattenOutputFiles": true,
   "sort": ["source-order"]
 }

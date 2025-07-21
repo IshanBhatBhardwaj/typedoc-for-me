@@ -1,18 +1,20 @@
 import {Application, RendererEvent} from 'typedoc'
 import * as fsSync from 'fs'
-import * as fsAsync from 'fs/promises'
 import * as path from 'path'
 
-function readFileSafe(filePath: string): Promise<string> {
-  return new Promise((resolve, reject) => {
-    fsSync.readFile(filePath, "utf-8", (err, data) => {
-      if (err) reject(err);
-      else resolve(data);
-    });
-  });
-}
-
 class TypeDocFormatter {
+
+  getRepoName() {
+    const packageJsonPath = path.resolve(process.cwd(), 'package.json');
+    const packageJson = JSON.parse(fsSync.readFileSync(packageJsonPath, 'utf-8'));
+
+    if (packageJson.name) {
+      return packageJson.name 
+    }
+
+    return path.basename(process.cwd())
+  }
+
   format(outputDir: string) {
     this.renameREADME(outputDir);
     this.formatAllFiles(outputDir);
@@ -73,10 +75,16 @@ class TypeDocFormatter {
   }
 
   replaceReferencesToRepoName(fileContents: string): string {
-    return fileContents.replaceAll(
-      /(# wiki-typedoc-example|(?<=\[)wiki-typedoc-example(?=\]))/g,
-      "API Reference"
+    const repoName = this.getRepoName();
+
+    const escapedRepoName = repoName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+    const pattern = new RegExp(
+      `(# ${escapedRepoName}|(?<=\\[)${escapedRepoName}(?=\\]))`,
+      'g'
     );
+
+    return fileContents.replaceAll(pattern, 'API Reference');
   }
 
   replaceLinksToReadMe(fileContents: string): string {
@@ -97,7 +105,6 @@ class TypeDocFormatter {
 export async function load(app: Application) {
 
 app.renderer.on(RendererEvent.END, async (event) => {
-  const filePath = path.join(event.outputDirectory, "Class.MaxHeap.md");
 
   const formatter = new TypeDocFormatter()
   formatter.format(event.outputDirectory);

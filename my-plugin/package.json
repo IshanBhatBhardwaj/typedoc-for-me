@@ -22,7 +22,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "postinstall": "cp typedoc.json $INIT_CWD"
+    "postinstall": "cp typedoc.json $INIT_CWD/.."
   },
   "devDependencies": {
     "@types/node": "^24.0.8"

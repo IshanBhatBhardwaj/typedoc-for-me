@@ -1,9 +1,0 @@
-{
-  "plugin": ["typedoc-plugin-markdown", "typedoc-plugin-myformatter"],
-  "readme": "none",
-  "entryPoints": ["src/index.ts"],
-  "out": "./docs",
-  "hidePageHeader": false,
-  "flattenOutputFiles": true,
-  "sort": ["source-order"]
-}

@@ -1,4 +1,5 @@
 import {Application, RendererEvent} from 'typedoc'
+import {MyPluginOptionsReader} from './reader'
 import * as fsSync from 'fs'
 import * as path from 'path'
 
@@ -103,11 +104,12 @@ class TypeDocFormatter {
 }
 
 export async function load(app: Application) {
+  app.options.addReader(new MyPluginOptionsReader());
 
-app.renderer.on(RendererEvent.END, async (event) => {
+  app.renderer.on(RendererEvent.END, async (event) => {
+    console.log('hello world')
 
-  const formatter = new TypeDocFormatter()
-  formatter.format(event.outputDirectory);
-});
-
+    const formatter = new TypeDocFormatter()
+    formatter.format(event.outputDirectory);
+  });
 }

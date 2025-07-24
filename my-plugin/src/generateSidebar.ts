@@ -34,7 +34,7 @@ export const generateSidebar = () => {
          * so the final result can look like 'Add.Nums'
          */
         const [category, ...rest] = file.replace(/\.md$/, '').split('.');
-        const pageName = [...rest].join('.'); 
+        const pageName = [category, ...rest].join('.'); 
 
         const pluaralcategory = getPluralWord(category)
 

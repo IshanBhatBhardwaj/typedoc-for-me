@@ -2,15 +2,17 @@
 
 - [[Home]]
 
+- [[API Reference]]
+
 ### 🧱 Classes
-  - [[Class.AbstractHeap]]
-  - [[Class.LinkedList]]
-  - [[Class.MaxHeap]]
-  - [[Class.MinHeap]]
-  - [[Class.Queue]]
+  - [[AbstractHeap]]
+  - [[LinkedList]]
+  - [[MaxHeap]]
+  - [[MinHeap]]
+  - [[Queue]]
 
 ### ⚙️ Functions
-  - [[Function.asCircular]]
+  - [[asCircular]]
 
 ### 📄 Other Pages
   - (None)

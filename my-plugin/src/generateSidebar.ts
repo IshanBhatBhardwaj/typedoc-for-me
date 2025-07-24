@@ -18,9 +18,9 @@ const others: string[] = [];
 allFiles.forEach(file => {
   const name = file.replace(/\.md$/, '');
   if (name.toLowerCase().includes('class')) {
-    classes.push(`  - [[${name}]]`);
+    classes.push(`  - [[${name.replace("Class.", "")}]]`);
   } else if (name.toLowerCase().includes('function')) {
-    functions.push(`  - [[${name}]]`);
+    functions.push(`  - [[${name.replace("Function.", "")}]]`);
   } else {
     others.push(`- [[${name}]]`);
   }
@@ -29,6 +29,7 @@ allFiles.forEach(file => {
 const sidebarContent = `### 📘 Wiki Contents
 
 ${home}
+${apiReference}
 ### 🧱 Classes
 ${classes.join('\n') || '  - (None)'}
 

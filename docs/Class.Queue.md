@@ -2,7 +2,7 @@
 
 # Class: Queue\<T\>
 
-Defined in: [queue.ts:3](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/queue.ts#L3)
+Defined in: [queue.ts:3](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/3a58970b80cafad553906ac668fce179dbfc77c2/src/queue.ts#L3)
 
 ## Type Parameters
 
@@ -26,7 +26,7 @@ Defined in: [queue.ts:3](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blo
 
 > **enqueue**(`item`): `void`
 
-Defined in: [queue.ts:11](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/queue.ts#L11)
+Defined in: [queue.ts:11](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/3a58970b80cafad553906ac668fce179dbfc77c2/src/queue.ts#L11)
 
 Adds an item to the end of the queue.
 
@@ -48,7 +48,7 @@ The item to be added.
 
 > **dequeue**(): `T`
 
-Defined in: [queue.ts:20](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/queue.ts#L20)
+Defined in: [queue.ts:20](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/3a58970b80cafad553906ac668fce179dbfc77c2/src/queue.ts#L20)
 
 Removes the first item in the queue and returns it.
 
@@ -64,7 +64,7 @@ Data of type `T`
 
 > **front**(): `T`
 
-Defined in: [queue.ts:38](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/queue.ts#L38)
+Defined in: [queue.ts:38](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/3a58970b80cafad553906ac668fce179dbfc77c2/src/queue.ts#L38)
 
 Returns the first item in the queue but does not remove it.
 
@@ -80,7 +80,7 @@ Data of type `T`
 
 > **size**(): `number`
 
-Defined in: [queue.ts:56](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/queue.ts#L56)
+Defined in: [queue.ts:56](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/3a58970b80cafad553906ac668fce179dbfc77c2/src/queue.ts#L56)
 
 Returns the number of items in the queue.
 
@@ -96,7 +96,7 @@ The length of the queue.
 
 > **isEmpty**(): `boolean`
 
-Defined in: [queue.ts:65](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/queue.ts#L65)
+Defined in: [queue.ts:65](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/3a58970b80cafad553906ac668fce179dbfc77c2/src/queue.ts#L65)
 
 Returns true if the queue contains no items.
 

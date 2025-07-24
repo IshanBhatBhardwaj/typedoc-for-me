@@ -2,7 +2,7 @@
 
 # Class: `abstract` AbstractHeap\<T\>
 
-Defined in: [abstract-heap.ts:5](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/d63eb461ab2565bf6cdd2c296c44143ec800e0ac/src/abstract-heap.ts#L5)
+Defined in: [abstract-heap.ts:5](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/abstract-heap.ts#L5)
 
 Represents a generalized heap. The exact implementations of its `heapifyUp`
 and `heapifyDown` methods are left to the subclass to define.
@@ -34,7 +34,7 @@ and `heapifyDown` methods are left to the subclass to define.
 
 > `protected` **heap**: `T`[] = `[]`
 
-Defined in: [abstract-heap.ts:6](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/d63eb461ab2565bf6cdd2c296c44143ec800e0ac/src/abstract-heap.ts#L6)
+Defined in: [abstract-heap.ts:6](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/abstract-heap.ts#L6)
 
 ## Methods
 
@@ -42,7 +42,7 @@ Defined in: [abstract-heap.ts:6](https://github.com/IshanBhatBhardwaj/typedoc-fo
 
 > `abstract` `protected` **heapifyUp**(`i`): `void`
 
-Defined in: [abstract-heap.ts:12](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/d63eb461ab2565bf6cdd2c296c44143ec800e0ac/src/abstract-heap.ts#L12)
+Defined in: [abstract-heap.ts:12](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/abstract-heap.ts#L12)
 
 Determines whether the the item at index i should move to the top of the
 heap, and if so, swaps it with its parent until it should no longer
@@ -64,7 +64,7 @@ be moved up.
 
 > `abstract` `protected` **heapifyDown**(`i`): `void`
 
-Defined in: [abstract-heap.ts:18](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/d63eb461ab2565bf6cdd2c296c44143ec800e0ac/src/abstract-heap.ts#L18)
+Defined in: [abstract-heap.ts:18](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/abstract-heap.ts#L18)
 
 Determines whether the the item at index i should move to the bottom of the
 heap, and if so, swaps it with one of its children until it should no
@@ -86,7 +86,7 @@ longer be moved down.
 
 > **insert**(`data`): `void`
 
-Defined in: [abstract-heap.ts:26](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/d63eb461ab2565bf6cdd2c296c44143ec800e0ac/src/abstract-heap.ts#L26)
+Defined in: [abstract-heap.ts:26](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/abstract-heap.ts#L26)
 
 Inserts data into the heap and bubbles it up to its proper location within
 the heap.
@@ -109,7 +109,7 @@ The data to insert.
 
 > **pop**(): `T`
 
-Defined in: [abstract-heap.ts:36](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/d63eb461ab2565bf6cdd2c296c44143ec800e0ac/src/abstract-heap.ts#L36)
+Defined in: [abstract-heap.ts:36](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/abstract-heap.ts#L36)
 
 Removes the extremum of the heap and returns it.
 
@@ -125,7 +125,7 @@ data of type `T`
 
 > **peek**(): `T`
 
-Defined in: [abstract-heap.ts:56](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/d63eb461ab2565bf6cdd2c296c44143ec800e0ac/src/abstract-heap.ts#L56)
+Defined in: [abstract-heap.ts:56](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/abstract-heap.ts#L56)
 
 Returns the extremum of the heap without removing it.
 
@@ -141,7 +141,7 @@ data of type `T`
 
 > **size**(): `number`
 
-Defined in: [abstract-heap.ts:69](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/d63eb461ab2565bf6cdd2c296c44143ec800e0ac/src/abstract-heap.ts#L69)
+Defined in: [abstract-heap.ts:69](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/abstract-heap.ts#L69)
 
 Returns the number of items in the heap.
 
@@ -157,7 +157,7 @@ The number of items in the heap.
 
 > **isEmpty**(): `boolean`
 
-Defined in: [abstract-heap.ts:78](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/d63eb461ab2565bf6cdd2c296c44143ec800e0ac/src/abstract-heap.ts#L78)
+Defined in: [abstract-heap.ts:78](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/abstract-heap.ts#L78)
 
 Returns true if the heap contains no items.
 
@@ -173,7 +173,7 @@ A boolean value indicating whether or not the heap is empty.
 
 > `protected` **parent**(`i`): `number`
 
-Defined in: [abstract-heap.ts:87](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/d63eb461ab2565bf6cdd2c296c44143ec800e0ac/src/abstract-heap.ts#L87)
+Defined in: [abstract-heap.ts:87](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/abstract-heap.ts#L87)
 
 Returns the index of the parent of the element at i.
 
@@ -195,7 +195,7 @@ The index of the parent of the element at i.
 
 > `protected` **leftChild**(`i`): `number`
 
-Defined in: [abstract-heap.ts:96](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/d63eb461ab2565bf6cdd2c296c44143ec800e0ac/src/abstract-heap.ts#L96)
+Defined in: [abstract-heap.ts:96](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/abstract-heap.ts#L96)
 
 Returns the index of the left child of the element at i.
 
@@ -217,7 +217,7 @@ The index of the left child of the element at i.
 
 > `protected` **rightChild**(`i`): `number`
 
-Defined in: [abstract-heap.ts:105](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/d63eb461ab2565bf6cdd2c296c44143ec800e0ac/src/abstract-heap.ts#L105)
+Defined in: [abstract-heap.ts:105](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/abstract-heap.ts#L105)
 
 Returns the index of the right child of the element at i.
 
@@ -239,7 +239,7 @@ The index of the right child of the element at i.
 
 > `protected` **swap**(`i`, `j`): `void`
 
-Defined in: [abstract-heap.ts:115](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/d63eb461ab2565bf6cdd2c296c44143ec800e0ac/src/abstract-heap.ts#L115)
+Defined in: [abstract-heap.ts:115](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/ad1c0e45bcbb2e242187a6be2faa7a0b3eb9cff8/src/abstract-heap.ts#L115)
 
 Swaps the values of the elements at indices i and j.
 

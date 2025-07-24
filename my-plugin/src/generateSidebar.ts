@@ -7,9 +7,10 @@ export const generateSidebar = () => {
 const sidebarPath = join(docsPath, '_Sidebar.md');
 
 const allFiles = readdirSync(docsPath)
-  .filter(file => file.endsWith('.md') && file !== '_Sidebar.md' && file !== 'Home.md');
+  .filter(file => file.endsWith('.md') && file !== 'Home.md' && file != 'API Reference.md');
 
 const home = `- [[Home]]\n`;
+const apiReference = `- [[API Reference]]\n`;
 const classes: string[] = [];
 const functions: string[] = [];
 const others: string[] = [];

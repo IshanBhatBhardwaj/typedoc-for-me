@@ -51,7 +51,7 @@ export const generateSidebar = () => {
         groups[group].sort();
     }
 
-    let sidebar = `📘 Wiki Contents\n\n[[Home]]\n\n[[API Reference]]\n\n`;
+    let sidebar = `Wiki Contents\n\n[[Home]]\n\n[[API Reference]]\n\n`;
 
     for (const group of sortedGroupNames) {
         sidebar += '<details>\n'

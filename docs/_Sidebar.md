@@ -1,24 +1,24 @@
 📘 Wiki Contents
 
-- [[Home]]
+[[Home]]
 
-- [[API Reference]]
+[[API Reference]]
 
 <details>
 <summary>
-Classs
+Classes
 </summary>
-  - [[Class.AbstractHeap]]
-  - [[Class.LinkedList]]
-  - [[Class.MaxHeap]]
-  - [[Class.MinHeap]]
-  - [[Class.Queue]]
+  - [[AbstractHeap]]
+  - [[LinkedList]]
+  - [[MaxHeap]]
+  - [[MinHeap]]
+  - [[Queue]]
 </details>
 
 <details>
 <summary>
 Functions
 </summary>
-  - [[Function.asCircular]]
+  - [[asCircular]]
 </details>
 

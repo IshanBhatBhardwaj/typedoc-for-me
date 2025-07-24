@@ -21,7 +21,8 @@
     "typescript": "^5.2.2"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "sidebar": "node dist/generateSidebar.js"
   },
   "devDependencies": {
     "@types/node": "^24.0.8"

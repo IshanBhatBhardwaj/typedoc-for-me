@@ -1,6 +1,7 @@
 import {Application, RendererEvent} from 'typedoc'
 import { OptionsReader, Options, Logger } from 'typedoc';
 import { fileURLToPath } from 'url';
+import { generateSidebar } from './generateSidebar.js';
 import * as fsSync from 'fs'
 import * as path from 'path'
 
@@ -136,5 +137,6 @@ export async function load(app: Application) {
   app.renderer.on(RendererEvent.END, async (event) => {
     const formatter = new TypeDocFormatter()
     formatter.format(event.outputDirectory);
+    generateSidebar();
   });
 }

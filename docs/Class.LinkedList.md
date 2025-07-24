@@ -2,7 +2,7 @@
 
 # Class: LinkedList\<T\>
 
-Defined in: [linked-list.ts:6](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/3a58970b80cafad553906ac668fce179dbfc77c2/src/linked-list.ts#L6)
+Defined in: [linked-list.ts:6](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/5e2e210b1d77dbcb3a66b2cc1031b01adbe608c4/src/linked-list.ts#L6)
 
 A doubly-linked list.
 
@@ -30,7 +30,7 @@ The type of data each node of the list will contain.
 
 > **append**(`data`): `void`
 
-Defined in: [linked-list.ts:16](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/3a58970b80cafad553906ac668fce179dbfc77c2/src/linked-list.ts#L16)
+Defined in: [linked-list.ts:16](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/5e2e210b1d77dbcb3a66b2cc1031b01adbe608c4/src/linked-list.ts#L16)
 
 Appends data to the end of the list.
 
@@ -52,7 +52,7 @@ The data to be appended.
 
 > **prepend**(`data`): `void`
 
-Defined in: [linked-list.ts:35](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/3a58970b80cafad553906ac668fce179dbfc77c2/src/linked-list.ts#L35)
+Defined in: [linked-list.ts:35](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/5e2e210b1d77dbcb3a66b2cc1031b01adbe608c4/src/linked-list.ts#L35)
 
 Prepends data to the beginning of the list.
 
@@ -74,7 +74,7 @@ The data to be prepended.
 
 > **getFirst**(): `T`
 
-Defined in: [linked-list.ts:54](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/3a58970b80cafad553906ac668fce179dbfc77c2/src/linked-list.ts#L54)
+Defined in: [linked-list.ts:54](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/5e2e210b1d77dbcb3a66b2cc1031b01adbe608c4/src/linked-list.ts#L54)
 
 Retrieves the data held by the first node in the list.
 
@@ -90,7 +90,7 @@ Data of type `T`
 
 > **getLast**(): `T`
 
-Defined in: [linked-list.ts:67](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/3a58970b80cafad553906ac668fce179dbfc77c2/src/linked-list.ts#L67)
+Defined in: [linked-list.ts:67](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/5e2e210b1d77dbcb3a66b2cc1031b01adbe608c4/src/linked-list.ts#L67)
 
 Retrieves the data held by the last node in the list.
 
@@ -106,7 +106,7 @@ Data of type `T`
 
 > **removeFirst**(): `T`
 
-Defined in: [linked-list.ts:80](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/3a58970b80cafad553906ac668fce179dbfc77c2/src/linked-list.ts#L80)
+Defined in: [linked-list.ts:80](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/5e2e210b1d77dbcb3a66b2cc1031b01adbe608c4/src/linked-list.ts#L80)
 
 Removes the first node in the list and returns the data it held.
 
@@ -122,7 +122,7 @@ Data of type `T`
 
 > **removeLast**(): `T`
 
-Defined in: [linked-list.ts:103](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/3a58970b80cafad553906ac668fce179dbfc77c2/src/linked-list.ts#L103)
+Defined in: [linked-list.ts:103](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/5e2e210b1d77dbcb3a66b2cc1031b01adbe608c4/src/linked-list.ts#L103)
 
 Removes the last node in the list and returns the data it held.
 
@@ -138,7 +138,7 @@ Data of type `T`
 
 > **size**(): `number`
 
-Defined in: [linked-list.ts:126](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/3a58970b80cafad553906ac668fce179dbfc77c2/src/linked-list.ts#L126)
+Defined in: [linked-list.ts:126](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/5e2e210b1d77dbcb3a66b2cc1031b01adbe608c4/src/linked-list.ts#L126)
 
 Returns the number of items in the list.
 
@@ -154,7 +154,7 @@ The length of the list.
 
 > **isEmpty**(): `boolean`
 
-Defined in: [linked-list.ts:135](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/3a58970b80cafad553906ac668fce179dbfc77c2/src/linked-list.ts#L135)
+Defined in: [linked-list.ts:135](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/5e2e210b1d77dbcb3a66b2cc1031b01adbe608c4/src/linked-list.ts#L135)
 
 Returns true if the list contains no items.
 
@@ -170,7 +170,7 @@ A boolean value indicating whether or not the list is empty.
 
 > **\[iterator\]**(): `Generator`\<`T`, `void`, `unknown`\>
 
-Defined in: [linked-list.ts:139](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/3a58970b80cafad553906ac668fce179dbfc77c2/src/linked-list.ts#L139)
+Defined in: [linked-list.ts:139](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/5e2e210b1d77dbcb3a66b2cc1031b01adbe608c4/src/linked-list.ts#L139)
 
 #### Returns
 

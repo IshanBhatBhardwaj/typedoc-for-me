@@ -30,8 +30,11 @@ const sidebarContent = `### 📘 Wiki Contents
 
 ${home}
 ${apiReference}
-### 🧱 Classes
+
+<details>
+<summary>### 🧱 Classes</summary>
 ${classes.join('\n') || '  - (None)'}
+</details>
 
 ### ⚙️ Functions
 ${functions.join('\n') || '  - (None)'}

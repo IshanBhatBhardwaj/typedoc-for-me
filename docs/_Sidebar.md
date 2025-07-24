@@ -4,15 +4,18 @@
 
 - [[API Reference]]
 
-### 🧱 Classes
-  - [[AbstractHeap]]
-  - [[LinkedList]]
-  - [[MaxHeap]]
-  - [[MinHeap]]
-  - [[Queue]]
+
+<details>
+<summary>### 🧱 Classes</summary>
+  - [[Class.AbstractHeap]]
+  - [[Class.LinkedList]]
+  - [[Class.MaxHeap]]
+  - [[Class.MinHeap]]
+  - [[Class.Queue]]
+</details>
 
 ### ⚙️ Functions
-  - [[asCircular]]
+  - [[Function.asCircular]]
 
 ### 📄 Other Pages
   - (None)

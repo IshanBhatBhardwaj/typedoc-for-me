@@ -1,48 +1,53 @@
-// generateSidebar.ts
 import { readdirSync, writeFileSync } from 'fs';
 import { join } from 'path';
 
 export const generateSidebar = () => {
-    const docsPath = join(process.cwd(), '/docs')
-const sidebarPath = join(docsPath, '_Sidebar.md');
 
-const allFiles = readdirSync(docsPath)
-  .filter(file => file.endsWith('.md') && file !== 'Home.md' && file != 'API Reference.md');
+    const docsPath = './docs';
+    const sidebarPath = join(docsPath, '_Sidebar.md');
 
-const home = `- [[Home]]\n`;
-const apiReference = `- [[API Reference]]\n`;
-const classes: string[] = [];
-const functions: string[] = [];
-const others: string[] = [];
+    // Ignore these files bru
+    const IGNORE_FILES = new Set(['_Sidebar.md', 'Home.md', 'API Reference.md']);
 
-allFiles.forEach(file => {
-  const name = file.replace(/\.md$/, '');
-  if (name.toLowerCase().includes('class')) {
-    classes.push(`  - [[${name}]]`);
-  } else if (name.toLowerCase().includes('function')) {
-    functions.push(`  - [[${name}]]`);
-  } else {
-    others.push(`- [[${name}]]`);
-  }
-});
+    const files = readdirSync(docsPath)
+    .filter(file => file.endsWith('.md') && !IGNORE_FILES.has(file));
 
-const sidebarContent = `### 📘 Wiki Contents
+    const groups: Record<string, string[]> = {};
 
-${home}
-${apiReference}
+    for (const file of files) {
 
-<details>
-<summary>### 🧱 Classes</summary>
-${classes.join('\n') || '  - (None)'}
-</details>
+    /***
+     * If the file name is Function.Add.Nums.md, then .split('.') would return ['Function', 'Add', 'Nums']
+     * 
+     * Therefore, we must use the spread operator to capture 'Add' and 'Nums' and use .join('.')
+     * so the final result can look like 'Add.Nums'
+     */
+    const [category, ...rest] = file.replace(/\.md$/, '').split('.');
+    const pageName = [category, ...rest].join('.'); 
 
-### ⚙️ Functions
-${functions.join('\n') || '  - (None)'}
+    if (!groups[category]) {
+        groups[category] = [];
+    }
 
-### 📄 Other Pages
-${others.join('\n') || '  - (None)'}
-`;
+    groups[category].push(`  - [[${pageName}]]`);
+    }
 
-writeFileSync(sidebarPath, sidebarContent);
-console.log(`✅ _Sidebar.md generated with ${allFiles.length} pages.`);
+    // Sort alphabetically like a boss muhaha
+    const sortedGroupNames = Object.keys(groups).sort();
+    for (const group of sortedGroupNames) {
+    groups[group].sort();
+    }
+
+    let sidebar = `📘 Wiki Contents\n\n- [[Home]]\n\n- [[API Reference]]\n\n`;
+
+    for (const group of sortedGroupNames) {
+    sidebar += '<details>\n'
+    sidebar += '<summary>\n'
+    sidebar += `${group}s\n`;
+    sidebar += '</summary>\n'
+    sidebar += groups[group].join('\n') + '\n';
+    sidebar += '</details>\n\n'
+    }
+
+    writeFileSync(sidebarPath, sidebar);
 }

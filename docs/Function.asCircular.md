@@ -4,7 +4,7 @@
 
 > **asCircular**\<`T`\>(`array`): `T`[]
 
-Defined in: [as-circular.ts:18](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/5e2e210b1d77dbcb3a66b2cc1031b01adbe608c4/src/as-circular.ts#L18)
+Defined in: [as-circular.ts:18](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/89b6f7cca3af1b30399a9c8be713e9994012bfe2/src/as-circular.ts#L18)
 
 Accepts an array and converts it into a circular array.
 

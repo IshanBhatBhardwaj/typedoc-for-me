@@ -1,12 +1,13 @@
-### 📘 Wiki Contents
+📘 Wiki Contents
 
 - [[Home]]
 
 - [[API Reference]]
 
-
 <details>
-<summary>### 🧱 Classes</summary>
+<summary>
+Classs
+</summary>
   - [[Class.AbstractHeap]]
   - [[Class.LinkedList]]
   - [[Class.MaxHeap]]
@@ -14,8 +15,10 @@
   - [[Class.Queue]]
 </details>
 
-### ⚙️ Functions
+<details>
+<summary>
+Functions
+</summary>
   - [[Function.asCircular]]
+</details>
 
-### 📄 Other Pages
-  - (None)

@@ -1,7 +1,32 @@
 import {Application, RendererEvent} from 'typedoc'
-import {MyPluginOptionsReader} from './reader'
+import { OptionsReader, Options, Logger } from 'typedoc';
+import { fileURLToPath } from 'url';
 import * as fsSync from 'fs'
 import * as path from 'path'
+
+export class MyPluginOptionsReader implements OptionsReader {
+  name = 'my-plugin-reader';
+  order = 100; // Run before typedoc.json (which is priority 200)
+  supportsPackages = true;
+
+  read(container: Options, logger: Logger, cwd: string, usedFile: (file: string) => void): void | Promise<void> {
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);    
+    const customConfigPath = __dirname + "/../typedoc-plugin.json"
+
+    if (fsSync.existsSync(customConfigPath)) {
+      try {
+        const data = JSON.parse(fsSync.readFileSync(customConfigPath, 'utf8'));
+
+        for (const [key, value] of Object.entries(data)) {
+          container.setValue(key, value);
+        }
+      } catch (err) {
+        console.warn(`Failed to parse typedoc-plugin.json: ${err.message}`);
+      }
+    }
+  }
+}
 
 class TypeDocFormatter {
 
@@ -104,11 +129,11 @@ class TypeDocFormatter {
 }
 
 export async function load(app: Application) {
+
   app.options.addReader(new MyPluginOptionsReader());
 
-  app.renderer.on(RendererEvent.END, async (event) => {
-    console.log('hello world')
 
+  app.renderer.on(RendererEvent.END, async (event) => {
     const formatter = new TypeDocFormatter()
     formatter.format(event.outputDirectory);
   });

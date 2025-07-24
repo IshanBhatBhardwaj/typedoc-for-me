@@ -2,7 +2,7 @@
 
 # Class: Queue\<T\>
 
-Defined in: [queue.ts:3](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/queue.ts#L3)
+Defined in: [queue.ts:3](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/queue.ts#L3)
 
 ## Type Parameters
 
@@ -26,7 +26,7 @@ Defined in: [queue.ts:3](https://github.com/8by8-org/typedoc-plugin-github-wiki/
 
 > **enqueue**(`item`): `void`
 
-Defined in: [queue.ts:11](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/queue.ts#L11)
+Defined in: [queue.ts:11](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/queue.ts#L11)
 
 Adds an item to the end of the queue.
 
@@ -48,7 +48,7 @@ The item to be added.
 
 > **dequeue**(): `T`
 
-Defined in: [queue.ts:20](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/queue.ts#L20)
+Defined in: [queue.ts:20](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/queue.ts#L20)
 
 Removes the first item in the queue and returns it.
 
@@ -64,7 +64,7 @@ Data of type `T`
 
 > **front**(): `T`
 
-Defined in: [queue.ts:38](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/queue.ts#L38)
+Defined in: [queue.ts:38](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/queue.ts#L38)
 
 Returns the first item in the queue but does not remove it.
 
@@ -80,7 +80,7 @@ Data of type `T`
 
 > **size**(): `number`
 
-Defined in: [queue.ts:56](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/queue.ts#L56)
+Defined in: [queue.ts:56](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/queue.ts#L56)
 
 Returns the number of items in the queue.
 
@@ -96,7 +96,7 @@ The length of the queue.
 
 > **isEmpty**(): `boolean`
 
-Defined in: [queue.ts:65](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/queue.ts#L65)
+Defined in: [queue.ts:65](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/queue.ts#L65)
 
 Returns true if the queue contains no items.
 

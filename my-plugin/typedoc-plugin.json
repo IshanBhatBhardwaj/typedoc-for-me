@@ -1,0 +1,7 @@
+{
+  "hidePageHeader": true,
+  "flattenOutputFiles": true,
+  "sort": ["source-order"],
+  "readme": "none",
+  "out": "./docs"
+}

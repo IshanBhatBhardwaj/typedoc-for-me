@@ -2,7 +2,7 @@
 
 # Class: MaxHeap
 
-Defined in: [max-heap.ts:6](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/max-heap.ts#L6)
+Defined in: [max-heap.ts:6](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/max-heap.ts#L6)
 
 A max heap: the greatest number contained in the heap will always be on top.
 
@@ -30,7 +30,7 @@ A max heap: the greatest number contained in the heap will always be on top.
 
 > `protected` **heap**: `number`[] = `[]`
 
-Defined in: [abstract-heap.ts:6](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/abstract-heap.ts#L6)
+Defined in: [abstract-heap.ts:6](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/abstract-heap.ts#L6)
 
 #### Inherited from
 
@@ -42,7 +42,7 @@ Defined in: [abstract-heap.ts:6](https://github.com/8by8-org/typedoc-plugin-gith
 
 > **insert**(`data`): `void`
 
-Defined in: [abstract-heap.ts:26](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/abstract-heap.ts#L26)
+Defined in: [abstract-heap.ts:26](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/abstract-heap.ts#L26)
 
 Inserts data into the heap and bubbles it up to its proper location within
 the heap.
@@ -69,7 +69,7 @@ The data to insert.
 
 > **pop**(): `number`
 
-Defined in: [abstract-heap.ts:36](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/abstract-heap.ts#L36)
+Defined in: [abstract-heap.ts:36](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/abstract-heap.ts#L36)
 
 Removes the extremum of the heap and returns it.
 
@@ -89,7 +89,7 @@ data of type `T`
 
 > **peek**(): `number`
 
-Defined in: [abstract-heap.ts:56](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/abstract-heap.ts#L56)
+Defined in: [abstract-heap.ts:56](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/abstract-heap.ts#L56)
 
 Returns the extremum of the heap without removing it.
 
@@ -109,7 +109,7 @@ data of type `T`
 
 > **size**(): `number`
 
-Defined in: [abstract-heap.ts:69](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/abstract-heap.ts#L69)
+Defined in: [abstract-heap.ts:69](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/abstract-heap.ts#L69)
 
 Returns the number of items in the heap.
 
@@ -129,7 +129,7 @@ The number of items in the heap.
 
 > **isEmpty**(): `boolean`
 
-Defined in: [abstract-heap.ts:78](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/abstract-heap.ts#L78)
+Defined in: [abstract-heap.ts:78](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/abstract-heap.ts#L78)
 
 Returns true if the heap contains no items.
 
@@ -149,7 +149,7 @@ A boolean value indicating whether or not the heap is empty.
 
 > `protected` **parent**(`i`): `number`
 
-Defined in: [abstract-heap.ts:87](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/abstract-heap.ts#L87)
+Defined in: [abstract-heap.ts:87](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/abstract-heap.ts#L87)
 
 Returns the index of the parent of the element at i.
 
@@ -175,7 +175,7 @@ The index of the parent of the element at i.
 
 > `protected` **leftChild**(`i`): `number`
 
-Defined in: [abstract-heap.ts:96](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/abstract-heap.ts#L96)
+Defined in: [abstract-heap.ts:96](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/abstract-heap.ts#L96)
 
 Returns the index of the left child of the element at i.
 
@@ -201,7 +201,7 @@ The index of the left child of the element at i.
 
 > `protected` **rightChild**(`i`): `number`
 
-Defined in: [abstract-heap.ts:105](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/abstract-heap.ts#L105)
+Defined in: [abstract-heap.ts:105](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/abstract-heap.ts#L105)
 
 Returns the index of the right child of the element at i.
 
@@ -227,7 +227,7 @@ The index of the right child of the element at i.
 
 > `protected` **swap**(`i`, `j`): `void`
 
-Defined in: [abstract-heap.ts:115](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/abstract-heap.ts#L115)
+Defined in: [abstract-heap.ts:115](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/abstract-heap.ts#L115)
 
 Swaps the values of the elements at indices i and j.
 
@@ -259,7 +259,7 @@ The index of the second element to swap.
 
 > `protected` **heapifyDown**(`i`): `void`
 
-Defined in: [max-heap.ts:13](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/max-heap.ts#L13)
+Defined in: [max-heap.ts:13](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/max-heap.ts#L13)
 
 Moves the item at index i down in the heap as long as it is less than one
 of its children.
@@ -286,7 +286,7 @@ The index whose value should be bubbled down through the heap.
 
 > `protected` **heapifyUp**(`i`): `void`
 
-Defined in: [max-heap.ts:41](https://github.com/8by8-org/typedoc-plugin-github-wiki/blob/5d6fd8b04257b57f2891a66d5ae805edb2cf30db/src/max-heap.ts#L41)
+Defined in: [max-heap.ts:41](https://github.com/IshanBhatBhardwaj/typedoc-for-me/blob/c063c7ceb3e0db0fb0438d9b5257e44e4e78c087/src/max-heap.ts#L41)
 
 Moves the item at index i up in the heap as long as it is greater than its
 parent.

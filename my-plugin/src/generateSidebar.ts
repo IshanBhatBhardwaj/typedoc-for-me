@@ -58,7 +58,7 @@ export const generateSidebar = () => {
         sidebar += '<summary>\n'
         sidebar += `${group}\n`;
         sidebar += '</summary>\n'
-        sidebar += groups[group].join('\n\n') + '\n\n';
+        sidebar += groups[group].join('\n') + '\n\n';
         sidebar += '</details>\n\n'
     }
 

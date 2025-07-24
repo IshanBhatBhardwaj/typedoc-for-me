@@ -18,9 +18,9 @@ const others: string[] = [];
 allFiles.forEach(file => {
   const name = file.replace(/\.md$/, '');
   if (name.toLowerCase().includes('class')) {
-    classes.push(`  - [[${name.replace("Class.", "")}]]`);
+    classes.push(`  - [[${name}]]`);
   } else if (name.toLowerCase().includes('function')) {
-    functions.push(`  - [[${name.replace("Function.", "")}]]`);
+    functions.push(`  - [[${name}]]`);
   } else {
     others.push(`- [[${name}]]`);
   }
